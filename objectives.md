@@ -9,6 +9,10 @@
 
 ## Resources
 
-* 
 * [React Docs - Component Lifecycle](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
+* [React Docs - ComponentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount)
 * [React Component Lifecycle Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+## Extra
+
+* Product API Url: 'https://shopping-cart-backend.herokuapp.com/'
