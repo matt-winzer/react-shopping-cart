@@ -39,8 +39,10 @@ class App extends Component {
     return (
       <div className="App">
         <CartHeader />
-        <CartItems cartItemsList={this.state.cartItemsList} />
-        <AddItem products={this.state.products} addItem={this.addItem} />
+        <div className="main-content">
+          <CartItems cartItemsList={this.state.cartItemsList} />
+          <AddItem products={this.state.products} addItem={this.addItem} />
+        </div>
         <CartFooter copyright={'2018'} />
       </div>
     );
