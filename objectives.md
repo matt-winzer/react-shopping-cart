@@ -4,7 +4,7 @@
 
 * Review shopping cart component hierarchy
 * Explain React component lifecycle methods
-* Identify lifecycle method to use for API calls
+  * Identify lifecycle method to use for initial API calls
 * Interact with an external API in React
 
 ## Resources
