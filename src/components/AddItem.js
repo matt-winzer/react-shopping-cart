@@ -7,7 +7,7 @@ class AddItem extends Component {
       name: '',
       priceInCents: ''
     },
-    quantity: '',
+    quantity: ''
   }
 
   handleProductChange = (event) => {
@@ -27,10 +27,13 @@ class AddItem extends Component {
   onSubmit = (event) => {
     event.preventDefault()
     this.props.addItem(this.state)
+    this.setState({
+      quantity: ''
+    })
   }
 
   render() {
-    const productOptions = this.props.products.map(product => <option key={product.id}>{product.name}</option>);
+    const productOptions = this.props.products.map(product => <option key={product.id}>{product.name}</option>)
 
     return (
       <form className="container" onSubmit={this.onSubmit}>
@@ -47,10 +50,10 @@ class AddItem extends Component {
           <div className="form-group">
             <label htmlFor="exampleFormControlSelect1">Product</label>
             <select className="form-control"
-                  id="exampleFormControlSelect1"
-                  placeholder="Select a product..."
-                  onChange={this.handleProductChange}>
-                {productOptions}
+                    id="exampleFormControlSelect1"
+                    placeholder="Select a product..."
+                    onChange={this.handleProductChange}>
+              {productOptions}
             </select>
           </div>
         <button type="submit" className="btn btn-primary mb-2">Add Item</button>

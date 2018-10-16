@@ -19,24 +19,27 @@ class App extends Component {
       { id: 46, name: 'Intelligent Leather Clock', priceInCents: 2999 },
       { id: 47, name: 'Ergonomic Bronze Lamp', priceInCents: 40000 },
       { id: 48, name: 'Awesome Leather Shoes', priceInCents: 3990 },
-    ]
-  }
-
-  addItem = () => {
-    console.log('you got me')
-  }
-
-  render() {
-    let cartItemsList = [
+    ],
+    cartItemsList: [
       { id: 1, product: { id: 40, name: 'Mediocre Iron Watch', priceInCents: 399 }, quantity: 1 },
       { id: 2, product: { id: 41, name: 'Heavy Duty Concrete Plate', priceInCents: 499 }, quantity: 2 },
       { id: 3, product: { id: 42, name: 'Intelligent Paper Knife', priceInCents: 1999 }, quantity: 1 },
     ]
+  }
 
+  addItem = (item) => {
+    item.id = this.state.cartItemsList.length + 1
+    const newCart = this.state.cartItemsList.concat(item)
+    this.setState({
+      cartItemsList: newCart
+    })
+  }
+
+  render() {
     return (
       <div className="App">
         <CartHeader />
-        <CartItems cartItemsList={cartItemsList} />
+        <CartItems cartItemsList={this.state.cartItemsList} />
         <AddItem products={this.state.products} addItem={this.addItem} />
         <CartFooter copyright={'2018'} />
       </div>
