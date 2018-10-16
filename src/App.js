@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <CartHeader />
-        <CartItems />
+        <CartItems cartItemsList={cartItemsList} />
         <CartFooter copyright={'2018'} />
       </div>
     );
