@@ -40,6 +40,7 @@ class AddItem extends Component {
         <div className="form-group">
           <label htmlFor="exampleFormControlInput1">Quantity</label>
           <input  type="number"
+                  required
                   className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Enter a quantity..."
