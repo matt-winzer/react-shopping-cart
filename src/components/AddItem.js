@@ -51,7 +51,6 @@ class AddItem extends Component {
             <label htmlFor="exampleFormControlSelect1">Product</label>
             <select className="form-control"
                     id="exampleFormControlSelect1"
-                    placeholder="Select a product..."
                     onChange={this.handleProductChange}>
               {productOptions}
             </select>

@@ -2,6 +2,11 @@ form {
   margin-top: 1em;
 }
 
+.total-cost {
+  margin: 1em 0;
+  font-weight: bold;
+}
+
 /* Sticky Footer */
 
 .App {
@@ -13,3 +18,4 @@ form {
 .main-content {
   flex: 1;
 }
+

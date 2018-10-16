@@ -35,12 +35,21 @@ class App extends Component {
     })
   }
 
+  calculateTotal = (cartItems) => {
+    const totalCost = cartItems.reduce((total, item) => {
+      return total + (item.product.priceInCents * item.quantity)
+    }, 0)
+    return totalCost
+  }
+
   render() {
+    const totalCost = this.calculateTotal(this.state.cartItemsList)
+
     return (
       <div className="App">
         <CartHeader />
         <div className="main-content">
-          <CartItems cartItemsList={this.state.cartItemsList} />
+          <CartItems cartItemsList={this.state.cartItemsList} totalCost={totalCost}/>
           <AddItem products={this.state.products} addItem={this.addItem} />
         </div>
         <CartFooter copyright={'2018'} />

@@ -25,6 +25,7 @@ const CartItems = (props) => {
         </div>
         {cartItems}
       </div>
+      <p className="total-cost">Total Cost: ${props.totalCost / 100}</p>
     </div>
   )
 }
